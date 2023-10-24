@@ -1,0 +1,158 @@
+:root {
+    --short: .2s;
+    --medium: .5s;
+    --long: 1s;
+}
+.lightMode {
+    --prim: #e18837;
+    --secon: #fcfdfc;
+    --tert: #3d8bd2;
+    --quad: #e7a15f;
+}
+.darkMode {
+    --prim: #a05a18;
+    --secon: #353535;
+    --tert: #235e95;
+    --quad: #C36D1D;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--secon);
+}
+/*
+Logo Banner
+ */
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: .1% 20px 0.1%;
+    background: var(--prim);
+    justify-content: space-between;
+}
+.logo-container img {
+    max-height: 120px;
+    border-radius: 50%;
+}
+label.logo {
+    padding: 0 20px;
+}
+label.logo a {
+    font-size: 700%;
+    font-weight: bold;
+    color: var(--secon);
+}
+.options {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.icon {
+    max-width: 50px;
+    max-height: 50px;
+    margin-top: 10px;
+}
+.icon:hover{
+    background: var(--quad);
+}
+input[type=checkbox] {
+    visibility: hidden;
+}
+/*
+Navigationbar
+ */
+nav {
+    padding-bottom: 90px;
+}
+nav ul {
+    float: right;
+    padding-bottom: 7px;
+    background: var(--prim);
+    border-bottom-left-radius: 20px;
+}
+nav ul li {
+    margin: 0 5px;
+    max-height: 100%;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+}
+nav ul li a {
+    font-size: 40px;
+    color: var(--secon);
+    text-transform: uppercase;
+}
+.active {
+    background: var(--quad);
+}
+li:hover {
+    background: var(--quad);
+}
+/*
+Grid Layout
+ */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.grid-item {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.text {
+    flex-direction: column;
+}
+img {
+    max-width: 700px;
+    border-radius: 20px;
+}
+h2 {
+    font-size: 500%;
+    color: var(--prim);
+}
+h3 {
+    padding: 30px;
+    font-size: 200%;
+    color: var(--tert);
+}
+/*
+dynamic Design
+ */
+@media only screen and (max-width: 1200px) {
+    .options {
+        flex-direction: row;
+    }
+    .logo-container img {
+        max-height: 70px;
+    }
+    label.logo a {
+        font-size: 450%;
+    }
+    nav ul li a {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .logo-container img {
+        max-height: 80px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    label.logo a {
+        display: none;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    img {
+        max-width: 400px;
+    }
+}

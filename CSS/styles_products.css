@@ -1,0 +1,170 @@
+:root {
+    --short: .2s;
+    --medium: .5s;
+    --long: 1s;
+}
+.lightMode {
+    --prim: #e18837;
+    --secon: #fcfdfc;
+    --tert: #3d8bd2;
+    --quad: #e7a15f;
+}
+.darkMode {
+    --prim: #a05a18;
+    --secon: #353535;
+    --tert: #235e95;
+    --quad: #C36D1D;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--secon);
+}
+/*
+Logo Banner
+ */
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: .1% 20px 0.1%;
+    background: var(--prim);
+    justify-content: space-between;
+}
+.logo-container img {
+    max-height: 120px;
+    border-radius: 50%;
+}
+label.logo {
+    padding: 0 20px;
+}
+label.logo a {
+    font-size: 700%;
+    font-weight: bold;
+    color: var(--secon);
+}
+.options {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.icon {
+    max-width: 50px;
+    max-height: 50px;
+    margin-top: 10px;
+}
+.icon:hover{
+    background: var(--quad);
+}
+input[type=checkbox] {
+    visibility: hidden;
+}
+/*
+Navigationbar
+ */
+nav {
+    padding-bottom: 90px;
+}
+nav ul {
+    float: right;
+    padding-bottom: 7px;
+    background: var(--prim);
+    border-bottom-left-radius: 20px;
+}
+nav ul li {
+    margin: 0 5px;
+    max-height: 100%;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+}
+nav ul li a {
+    font-size: 40px;
+    color: var(--secon);
+    text-transform: uppercase;
+}
+.active {
+    background: var(--quad);
+}
+li:hover {
+    background: var(--quad);
+}
+/*
+Grid Layout
+ */
+.grid-container {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    padding: 10px 25px 10px 25px;
+    grid-template-columns: repeat(5, 1fr);
+}
+.grid-item{
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--prim);
+}
+.picture {
+    max-width: 200px;
+    border-radius: 20px;
+}
+.grid-item h2, h3 {
+    color: var(--secon);
+}
+/*
+Specific Color
+ */
+.blue {
+    background-color: var(--tert);
+}
+.tert h2, .tert h3 {
+    color: var(--tert);
+}
+.tert {
+    background-color: var(--secon);
+}
+/*
+dynamic Design
+ */
+@media only screen and (max-width: 1200px) {
+    .options {
+        flex-direction: row;
+    }
+    .logo-container img {
+        max-height: 70px;
+        padding-top: 5px;
+    }
+    label.logo a {
+        font-size: 360%;
+    }
+    nav ul li a {
+        font-size: 30px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 760px) {
+    .logo-container img {
+        max-height: 80px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    label.logo a {
+        display: none;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .picture {
+        max-width: 400px;
+    }
+}

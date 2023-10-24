@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+    <link rel="stylesheet" href="CSS/styles_employees.css">
+    <!-- Scripte -->
+    <script src="JS/theme_script.js" async></script>
+    <script src="JS/language_script.js" async></script>
+    <script src="JS/media_query_script.js" async></script>
+</head>
+<body>
+    <!-- Logo, Name -->
+    <div class="logo-container">
+        <a href="home.html"><img src="img/logo.png" alt="Clockwork"></a>
+        <label class="logo"><a href="home.html">Clockwork Orange</a></label>
+        <div class="options">
+            <input type="checkbox" id="mode-toggle-theme">
+            <label for="mode-toggle-theme" class="toggle-label">
+                <img class="icon" src="img/mond.png" alt="Darkmode Toggle Button">
+            </label>
+            <input type="checkbox" id="mode-toggle-lang">
+            <label for="mode-toggle-lang" class="toggle-label">
+                <img id="img-lang" class="icon" src="img/united-kingdom.png" alt="Language Toggle Button">
+            </label>
+        </div>
+    </div>
+    <!-- Navigationbar -->
+    <nav>
+        <ul>
+            <li><a href="home.html" data-translate="navigation_one">Home</a></li>
+            <li><a href="products.html" data-translate="navigation_two">Products</a></li>
+            <li class="active"><a href="employees.html" data-translate="navigation_three">Employees</a></li>
+            <li><a href="about_us.html" data-translate="navigation_four">About Us</a></li>
+        </ul>
+    </nav>
+    <!-- Employerlist -->
+    <section class="grid-container">
+        <!-- First Employee -->
+        <div class="grid-item left orange">
+            <img class="pic" src="img/person-1.jpeg" alt="Person1">
+        </div>
+        <div class="grid-item right orange">
+            <h2>Name Example</h2>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3 class="last">Lorem ipsum dolor sit amet, consetetur sadipscing.</h3>
+        </div>
+        <!-- Second Employee -->
+        <div class="grid-item left tert">
+            <h2>Name Example</h2>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3 class="last">Lorem ipsum dolor sit amet, consetetur sadipscing.</h3>
+            </div>
+        <div class="grid-item right tert">
+            <img class="pic" src="img/person-2.jpeg" alt="Person2">
+        </div>
+        <!-- Third Employee -->
+        <div class="grid-item left blue">
+            <img class="pic" src="img/person-5.jpeg" alt="Person3">
+        </div>
+        <div class="grid-item right blue">
+            <h2>Name Example</h2>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3 class="last">Lorem ipsum dolor sit amet, consetetur sadipscing.</h3>
+        </div>
+    </section>
+</body>
+</html>

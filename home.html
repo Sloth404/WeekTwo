@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/styles_home.css">
+</head>
+<body>
+    <!-- Logo, Name -->
+    <div class="logo-container">
+        <a href="home.html"><img src="img/logo.png" alt="Clockwork"></a>
+        <label class="logo"><a href="home.html">Clockwork Orange</a></label>
+        <div class="options">
+            <input type="checkbox" id="mode-toggle-theme">
+            <label for="mode-toggle-theme" class="toggle-label">
+                <img class="icon" src="img/mond.png" alt="Darkmode Toggle Button">
+            </label>
+            <input type="checkbox" id="mode-toggle-lang">
+            <label for="mode-toggle-lang" class="toggle-label">
+                <img id="img-lang" class="icon" src="img/united-kingdom.png" alt="Language Toggle Button">
+            </label>
+        </div>
+    </div>
+    <!-- Navigationbar -->
+    <nav>
+        <ul>
+            <li class="active"><a href="home.html" data-translate="navigation_one">Home</a></li>
+            <li><a href="products.html" data-translate="navigation_two">Products</a></li>
+            <li><a href="employees.html" data-translate="navigation_three">Employees</a></li>
+            <li><a href="about_us.html" data-translate="navigation_four">About Us</a></li>
+        </ul>
+    </nav>
+    <!-- Live Time, Greeting -->
+    <section class="grid-container-top">
+        <div class="grid-item blue">
+            <div class="time-div">
+                <p id="time-id" class="time-class"></p>
+            </div>
+            <div class="time-div">
+                <p id="date-id" class="date-class" data-translate="monday"></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p id="welcome-text" data-translate="greeting_morning"></p>
+        </div>
+    </section>
+    <!-- Products -->
+    <section class="grid-container-bottom">
+        <!-- Product One -->
+        <div class="grid-item-bottom">
+            <img class="picture" src="img/white_1.png" alt="watch_white_one">
+            <div class="card">
+                <h2>Watch One</h2>
+                <h3>40mm</h3>
+                <h3 data-translate="automatic">Automatic</h3>
+                <h3 data-translate="leather">Aluminium/Leather</h3>
+                <h3 data-translate="two">250$</h3>
+            </div>
+        </div>
+        <!-- Product Two -->
+        <div class="grid-item-bottom">
+            <img class="picture" src="img/white_2.png" alt="watch_orange_one">
+            <div class="card">
+                <h2>Watch Two</h2>
+                <h3>40mm</h3>
+                <h3 data-translate="manuel">Automatic</h3>
+                <h3 data-translate="aluminium">Aluminium/Leather</h3>
+                <h3 data-translate="two_two">250$</h3>
+            </div>
+        </div>
+        <!-- Product Three -->
+        <div class="grid-item-bottom">
+            <img class="picture" src="img/white_3.png" alt="watch_white_two">
+            <div class="card">
+                <h2>Watch Three</h2>
+                <h3>40mm</h3>
+                <h3 data-translate="manuel">Automatic</h3>
+                <h3 data-translate="aluminium">Aluminium/Leather</h3>
+                <h3 data-translate="two_five">250$</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Scripte -->
+    <script src="JS/random_script.js" defer></script>
+    <script src="JS/time_script.js" defer></script>
+    <script src="JS/greeting_script.js" defer></script>
+    <script src="JS/theme_script.js" defer></script>
+    <script src="JS/language_script.js" defer></script>
+</body>
+</html>
